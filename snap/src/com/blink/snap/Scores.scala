@@ -8,7 +8,7 @@ final case class Scores(p1Score: Int, p2Score: Int) {
     case Player2 => new Scores(p1Score, p2Score  + score)
   }
 
-  def winner: Player = if (p1Score > p2Score) Player1 else Player2
+  def winner: Player = if (p1Score >= p2Score) Player1 else Player2
 
   override def toString: String = {
     s"""|The winner is $winner. Scores =>
